@@ -50,6 +50,7 @@ wss.on('connection', function connection(ws) {
     ws.on('message', function (data: string){
         try {
             const message: ClientMessage = JSON.parse(data);
+            // console.log(message);
             handleClientMessage(ws, message);
         } catch (error) {
             console.error('Invalid message format:', error);
@@ -85,7 +86,8 @@ function processVote(ws: WebSocket, pollsId: string, optionId: string) {
     }
 
     option.votes += 1;
-
+    console.log('Vote Cast Success', poll);
+    
     const updateMessage : ServerMessage = {
         type: 'update',
         pollsId: pollsId,

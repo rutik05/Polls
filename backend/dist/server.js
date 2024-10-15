@@ -45,6 +45,7 @@ wss.on('connection', function connection(ws) {
     ws.on('message', function (data) {
         try {
             const message = JSON.parse(data);
+            // console.log(message);
             handleClientMessage(ws, message);
         }
         catch (error) {
@@ -77,6 +78,7 @@ function processVote(ws, pollsId, optionId) {
         return;
     }
     option.votes += 1;
+    console.log('Vote Cast Success', poll);
     const updateMessage = {
         type: 'update',
         pollsId: pollsId,

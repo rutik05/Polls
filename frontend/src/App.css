@@ -1,0 +1,52 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.pollsSection {
+  width: 30vw;
+  min-height: 30vh; /* Ensures there's a minimum height */
+  border: solid 5px white;
+  padding: 10px; /* Adds padding for spacing inside the box */
+  overflow: auto; /* Allows scrolling if the content exceeds a certain height */
+}
+.listContainer{
+  width: 30vw;
+  min-height: 25vh; /* Ensures there's a minimum height */
+  border: solid 5px white;
+  padding: 10px; /* Adds padding for spacing inside the box */
+  overflow: auto; /* Allows scrolling if the content exceeds a certain height */
+}
+li{
+  list-style: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.listItem {
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+  position: relative;
+  color: black;
+  display: flex;
+  flex-direction: row; /* Row layout for text and percentage */
+  justify-content: flex-start; /* Space between text and percentage */
+  align-items: center;
+  text-wrap: nowrap;
+  overflow: visible
+}
+.percentageText {
+  font-size: 14px;
+  font-weight: bold;
+  color: green;
+  text-wrap: nowrap;
+ 
+}
+.optionText{
+  font-size: 14px;
+  font-weight: bold;
+}

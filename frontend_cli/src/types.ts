@@ -17,7 +17,7 @@ export interface ClientMessage{
 }
 export interface ServerMessage{
     type : string;
-    data ?: Poll[] | Option[];
+    data : Poll[] | Option[];
     pollsId ?: string;
     optionId ?: string;
     message ?: string;
